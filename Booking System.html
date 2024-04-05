@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="Booking System.css">
+
+    <style>
+        .page-link {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .page-link li {
+            display: inline;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Piha Lodge</h1>        
+        <ul class="page-link">
+            <li><a href="page1">Home</a></li>
+            <li><a href="page2">About Us</a></li>
+            <li><a href="page3">Services</a></li>
+            <li><a href="page4">Book Now</a></li>
+            <li><a href="page5">Contact Us</a></li>
+        </ul>
+
+    <main>
+        <div class="container">
+            <div class="logo-container">
+              <img id="logo" src=".assets\PihaLodge.jpg" alt="Piha Lodge"/>
+            </div>
+            <p>Welcome to Piha Lodge at Auckland New Zealand</p>
+            <p>Welcome to Piha Lodge, which is tucked away in an incredibly beautiful natural setting. Our lodge provides 
+                a calm escape from the daily grind, surrounded by verdant surroundings, majestic trees, and the comforting 
+                sound of birdsong. Every moment spent here is a sensory extravaganza, with the serene waters of Piha Beach
+                and breathtaking mountains in the background. Our resort promises an amazing experience, whether you're 
+                looking for adventure in the untamed landscapes or just serene relaxation. At Piha Lodge, take in the 
+                breathtaking scenery, revitalize your soul, and make enduring memories.</p>
+          </div>
+    </main>
+
+        <div id="page2">
+            <h2>About Us</h2>
+            <p>Nestled in the wild splendor of the natural world, Piha Lodge is a peaceful sanctuary. Our resort, 
+                surrounded by lush foliage and set against the backdrop of Piha Beach's immaculate shoreline, invites you 
+                to relax in the embrace of peace. Whether you're looking for an adventure in the midst of wild scenery or 
+                a tranquil getaway to lift your spirits, Piha Lodge provides an unmatched experience. Every moment spent 
+                here offers an incredible voyage into the heart of New Zealand's natural beauties, from our comfortable 
+                lodging to the breathtaking views. At Piha Lodge, where experiences are weaved amid the natural beauty of 
+                the surroundings, discover the spirit of adventure and relaxation.</p>
+            <a href="Booking.html">Book Now</a>
+        </div>
+
+        <div id="page3">
+            <h2>Our Services</h2>
+            <p>At Piha Lodge, we take great satisfaction in offering outstanding services designed to enhance your visit. 
+                Our team is committed to ensuring that every part of your visit surpasses your expectations, from 
+                individual concierge assistance to expertly guided nature hikes. Savor delectable meals at our on-site 
+                restaurant, relax with a treatment at our spa, or go on exhilarating outdoor excursions with knowledgeable 
+                guides. Our range of services accommodates all tastes, from those seeking adventure to those seeking 
+                relaxation, and we guarantee a very memorable stay set against the breathtaking background of Piha Beach. 
+                At Piha Lodge, you will find the pinnacle of luxury and hospitality, with each moment meticulously 
+                designed to guarantee your maximum comfort and happine</p>
+            <a href="contact.html">Get in Touch</a>
+        </div>
+
+        <div id="page4">
+            <h2>Book Now</h2>
+            <p>At Piha Lodge, indulge in the height of luxury and solitude. Our resort, tucked away in the beauty of 
+                nature, provides a getaway unlike any other. Every minute of this beautiful setting offers refreshment and
+                tranquility, from the quiet ambience to the magnificent views of Piha Beach. Make your reservation right 
+                away to fully experience Piha Lodge's splendor, where unmatched natural beauty and leisure collide.</p>
+            <a href="about.html">Learn More</a>
+
+            <body>
+                <div class="container">
+                  <h2>Book Now Your Stay</h2>
+                  <form id="booking-form">
+                    <label for="guests">Number of Guests:</label>
+                    <input type="number" id="guests" name="guests" min="1" required>
+
+                    <label for="check-in-date">Check-In Date:</label>
+                    <input type="date" id="check-in-date" name="check-in-date" required>
+              
+                    <label for="check-out-date">Check-Out Date:</label>
+                    <input type="date" id="check-out-date" name="check-out-date" required>
+              
+                    <label for="room-type">Room Type:</label>
+                    <select id="room-type" name="room-type" required>
+                      <option value="standard">Standard Room</option>
+                      <option value="deluxe">Deluxe Room</option>
+                      <option value="suite">Suite</option>
+                    </select>
+              
+                    <div class="button-container">
+                      <a href="about.html" class="button">Back</a>
+                      <button type="button" id="next-button">Next</button>
+                    </div>
+                  </form>
+                  <div class="progress-bar">
+                    <!-- Progress bar will be updated via JavaScript -->
+                  </div>
+                </div>
+              
+                <script>
+                  document.getElementById('next-button').addEventListener('click', function() {
+                    // Gather information from the form
+                    var checkInDate = document.getElementById('check-in-date').value;
+                    var checkOutDate = document.getElementById('check-out-date').value;
+                    var roomType = document.getElementById('room-type').value;
+                    var guests = document.getElementById('guests').value;
+              
+                    // Store information
+                    sessionStorage.setItem('checkInDate', checkInDate);
+                    sessionStorage.setItem('checkOutDate', checkOutDate);
+                    sessionStorage.setItem('roomType', roomType);
+                    sessionStorage.setItem('guests', guests);
+              
+                    // Redirect to the summary page
+                    window.location.href = 'summary.html';
+                  });
+                </script>
+
+        </div>
+
+        <div id="page5">
+            <h2>Contact Us</h2>
+            <p>It's easy to get in touch with Piha Lodge with questions or reservations. Contact us via email at 
+                [enter email address] or by phone at [insert phone number]. Alternatively, for online reservations and 
+                further information, visit our website at [enter website URL]. Only a short drive from Auckland, New 
+                Zealand, our lodge provides a tranquil haven amidst the breathtaking natural beauty of Piha Beach. Nestled 
+                within verdant foliage and offering a view of the serene waters, Piha Lodge is a sanctuary for leisure and 
+                exploration. Piha Lodge awaits, offering an incredible experience enveloped in nature's embrace, whether 
+                you're looking for a tranquil getaway or exhilarating explorati</p>
+            <a href="booking.html">Book Now</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024. All rights reserved.</p>
+    </footer>
+</body>
+</html>
